@@ -19,7 +19,8 @@ from django.views.generic.base import TemplateView
 from hello_django import views
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='index.html')),
+    #path('', views.index),
+    path('', views.Home.as_view()),
     path('calc/', include('hello_django.calc.urls')),
     # path('admin/', admin.site.urls),
 ]
